@@ -285,9 +285,9 @@ Note: These SQL commands assume that the MySQL database has already been set up 
 
 </blockquote>
 
-And we have some actual SQL in the response. We have inconsistent use of DATE and TIMESTAMP. Message content is probably irrelevant for us. Not perfect, but not bad! Can you spot any other issues?
+And we have some actual SQL in the response. We have inconsistent use of DATE and TIMESTAMP. Message content is probably irrelevant for us from the reporting point-of-view. Not perfect, but not bad! Can you spot any other issues?
 
-Next would be Step 3: Extract data from the operation database. Let’s assume that we have automation for duplicating the operational database to the staging area of the data warehouse. We still need to transform the data from the operational schema to the generated star schema.
+Next would be _Step 3: Extract data from the operation database_. Let’s assume that we have automation for duplicating the operational database to the staging area of the data warehouse. We still need to transform the data from the operational schema to the generated star schema.
 
 <blockquote>
 
@@ -392,7 +392,7 @@ Note: These SQL commands assume that the necessary tables have already been crea
 
 </blockquote>
 
-What the first index is trying to achive? Is it for `groups_dim` or `chats_groups_bridge`. I guess it is for `chats_groups_bridge`. The second one makes sense, right? We will have to do joins for messages based on `chat_id` for sure. I'm pretty sure we would benefit from other indices as well, but let's move on to the query.
+What the first index is trying to achive? Is it for `groups_dim` or `chats_groups_bridge`. I guess it is for `chats_groups_bridge`. The second one makes sense, right? We will have to do joins for messages based on `chat_id` for sure. I'm pretty sure we would benefit from other indices as well, but on the other hand you don't really use indices with BigQuery or Spark. Let's move on to the query.
 
 <blockquote>
 
@@ -504,7 +504,7 @@ PARTITION p4 VALUES LESS THAN ('2022-04-01')
 
 </blockquote>
 
-That’s better. We usually don't want the whole history of messages per group, but the last three months or the past year. This would speed thing up. Partitioning by date is pretty standard way to speed up, but the above is a bit ugly and clunky.
+That’s better. We usually don't want the whole history of messages per group, but the last three months or the past year. This would speed thing up. Partitioning by date is pretty standard way to speed up queries, but the above is a bit ugly and clunky.
 
 Would the AI have included partitioning the first time, if we had included the information "a lot of messages are added each day" to the initial prompt? Maybe, maybe not. My gut feeling is that if you try to add too many things at once, the results are not so reliable.
 
@@ -572,7 +572,7 @@ Enough, isn’t it? At this point, you either think that this is pretty impressi
 
 ## AI explains the code
 
-How about if we face the above SQL query in the code? Of course, no comments. Let's ask ChatGPT to explain it with "in the context of an instant messaging application" as the only context.
+How about if we face the above SQL query in the code? No comments in the code - of course. Let's ask ChatGPT to explain it with "in the context of an instant messaging application" as the only context.
 
 <blockquote>
 
