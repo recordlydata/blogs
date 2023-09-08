@@ -2,7 +2,7 @@
 
 ChatGPT, Copilot, generative AI, autonomous AI agents, AutoGPT, BabyAGI, … Did everyone suddenly forget variational autoencoders and generative adversarial networks? RNNs? LSTM? BERT? And all the acronyms that were hot just a while ago. Oh, well. Large language models are still using self-supervised learning, embeddings, and transformers under the hood. So, I guess it kind of counts.
 
-But what is new? Where is the business value? If you didn't already read [Collaborating with ChatGPT to generate a data warehouse - how far are we?](), you can find a partial answer there.
+But what is new? Where is the business value? If you didn't already read [the main blog post](../biz/README.md), you can find a partial answer there.
 
 > TLDR; Business value is at least in code autocompletion, code generation (text-to-code) and code interpretation (code-to-text), and refactoring (code-to-code).
 

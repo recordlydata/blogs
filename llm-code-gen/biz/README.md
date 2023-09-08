@@ -1,4 +1,4 @@
-# Collaborating with ChatGPT to generate a data warehouse - how far are we?
+# Collaborating with ChatGPT to generate a data warehouse
 
 ChatGPT, Copilot, generative AI, autonomous AI agents, AutoGPT, BabyAGI, … My social media feeds are full of generative AI posts each showing off more amazing demos than the previous one. This is putting some heavy stress on my hype hogwash filter. Where is the business value? Is this relevant to us? Or just for the next unicorn startup? Maybe this is just amazing but useless beyond entertainment purposes?
 
@@ -34,7 +34,7 @@ Recordly excels at building data warehouses. How could AI help us with that? Or 
 
 We could just try to guess who is right... Or we could get our hands dirty and acquire some first-hand experience. The choice is obvious. Recordly is a down-to-earth business data company and we are not afraid to get our hands dirty. We actually enjoy it. So, let's try to generate a minimal data warehouse with generative AI – a large language model (LLM) called ChatGPT. Might have heard of it, haven't you?
 
-If you want the dirty details with example prompts and responses, check out “Generating a data warehouse in collaboration with ChatGPT - tech demo” [LINK HERE]. If you are more business orientated, here is a brief summary.
+If you want the dirty details with example prompts and responses, check out [Collaborating with ChatGPT to generate a data warehouse - tech demo](../tech/README.md). If you are more business orientated, here is a brief summary.
 
 We give an initial task for the AI:
 
